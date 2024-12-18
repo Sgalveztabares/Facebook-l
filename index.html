@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/facebook-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Facebook - Inicia sesión o regístrate</title>
+</head>
+<body>
+    
+    <section class="content" id="content">
+        <div class="list-content">
+            
+            <div>
+                <img src="img/Facebook-Logo-2.png" alt="imagen facebook" width="260px" class="facebook">   
+                <p>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</p>
+            </div>
+            
+            <div class="content-2">
+                <form action="" id="form">
+                    <input type="text" placeholder="Correo electrónico o número de teléfono">
+                    
+                    <div class="input-container">
+                        <input type="password" id="password" placeholder="Escribe tu contraseña">
+                        <i id="togglePassword" class="fa fa-eye"></i>
+                    </div>
+
+                    <button class="boton-1"> <a href="https://phishing-prevencion.vercel.app/">Iniciar sesión</a> </button>
+
+                    <a href="" class="text-2">¿Olvidaste tu Contraseña?</a>
+                    <br>
+                    <hr>
+                    <button class="boton-2">Crear cuenta nueva</button>
+                </form>
+                <p class="text-1"><a href="" >Crea una página</a> para una celebridad, una marca o un negocio.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <ul>
+                <li>Español</li>
+                <li>English (US)</li>
+                <li>Français (France)</li>
+                <li>Português (Brasil)</li>
+                <li>Italiano</li>
+                <li>Deutsch</li>
+                <li>العربية</li>
+                <li>हिन्दी</li>
+                <li>中文(简体)</li>
+                <li>日本語</li>
+                <li><button class="boton-3"><i class="fa-solid fa-plus"></i></button></li>
+            </ul>
+            <hr>
+            <ul >
+                <li class="list-3"><a href="#">Registrarte</a></li>
+                <li class="list-2"><a href="#">Iniciar sesión</a></li>
+                <li class="list-2"><a href="#">Messenger</a></li>
+                <li class="list-2"><a href="#">Facebook Lite</a></li>
+                <li class="list-2"><a href="#">Video</a></li>
+                <li class="list-2"><a href="#">Lugares</a></li>
+                <li class="list-2"><a href="#">Juegos</a></li>
+                <li class="list-2"><a href="#">Marketplace</a></li>
+                <li class="list-2"><a href="#">Meta Pay</a></li>
+                <li class="list-2"><a href="#">Meta Store</a></li>
+                <li class="list-2"><a href="#">Meta Quest</a></li>
+                <li class="list-2"><a href="#">Ray-Ban Meta</a></li>
+                <li  class="list-3"><a href="#">Meta AI</a></li>
+                <li  class="list-3"><a href="#">Instagram</a></li>
+                <li class="list-2"><a href="#">Threads</a></li>
+                <li class="list-2"><a href="#">Recaudaciones de fondos</a></li>
+                <li class="list-2"><a href="#">Servicios</a></li>
+                <li class="list-2"><a href="#">Centro de información de votación</a></li>
+                <li class="list-2"><a href="#">Política de privacidad</a></li>
+                <li class="list-2"><a href="#">Centro de privacidad</a></li>
+                <li class="list-2"><a href="#">Grupos</a></li>
+                <li class="list-2"><a href="#">Información</a></li>
+                <li class="list-3"><a href="#">Crear anuncio</a></li>
+                <li class="list-2"><a href="#">Crear página</a></li>
+                <li class="list-2"><a href="#">Desarrolladores</a></li>
+                <li class="list-2"><a href="#">Empleo</a></li>
+                <li class="list-2"><a href="#">Cookies</a></li>
+                <li class="list-2"><a href="#">Opciones de anuncios</a></li>
+                <li class="list-2"><a href="#">Condiciones</a></li>
+                <li class="list-2"><a href="#">Ayuda</a></li>
+                <li class="list-2"><a href="#">Importación de contactos y no usuarios</a></li>
+            </ul>
+        </div>
+        <br>    
+        <label for="">Meta © 2024</label>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        // Mostrar el ícono solo cuando haya texto
+        passwordInput.addEventListener("input", () => {
+            if (passwordInput.value.trim().length > 0) {
+                togglePassword.style.display = "block";
+            } else {
+                togglePassword.style.display = "none";
+            }
+        });
+
+        // Alternar visibilidad de la contraseña
+        togglePassword.addEventListener("click", () => {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.classList.remove("fa-eye");
+                togglePassword.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                togglePassword.classList.remove("fa-eye-slash");
+                togglePassword.classList.add("fa-eye");
+            }
+        });
+    </script>
+
+</body>
+</html>
